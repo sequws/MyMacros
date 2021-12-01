@@ -1,9 +1,9 @@
 ﻿using ControlzEx.Theming;
 using Core.Interfaces;
+using Core.Services;
 using Prism.Ioc;
 using Prism.Modularity;
 using Shell.DataAccess;
-using Shell.Services;
 using Shell.Views;
 using System.Threading;
 using System.Windows;

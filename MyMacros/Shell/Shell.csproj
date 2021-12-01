@@ -69,7 +69,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="DataAccess\MainSettings.cs" />
-    <Compile Include="Services\GlobalSettingService.cs" />
     <Compile Include="ViewModels\HomeViewModel.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
     <Compile Include="Views\HomeView.xaml.cs">

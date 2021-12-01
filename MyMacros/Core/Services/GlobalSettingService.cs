@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Shell.Services
+namespace Core.Services
 {
     public class GlobalSettingService : IGlobalSettingService
     {
