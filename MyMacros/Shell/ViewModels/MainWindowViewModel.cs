@@ -1,4 +1,5 @@
-﻿using NLog;
+﻿using Core.Interfaces;
+using NLog;
 using Prism.Commands;
 using Prism.Mvvm;
 using Prism.Regions;
@@ -16,13 +17,21 @@ namespace Shell.ViewModels
         }
 
         private readonly IRegionManager _regionManager;
+        private readonly IGlobalSettingService _settingService;
 
-        public MainWindowViewModel(IRegionManager regionManager)
+        public MainWindowViewModel(
+            IRegionManager regionManager,
+            IGlobalSettingService settingService)
         {
             _regionManager = regionManager;
+            _settingService = settingService;
+
             NavigateCommand = new DelegateCommand<string>(Navigate);
 
+            var test =_settingService.Get("AppLanguage");
+
             //logger.Info("MainWindow Start!");
+            //_settingService.Update("AppLanguage", "en-EN");
         }
 
         private void Navigate(string uri)
