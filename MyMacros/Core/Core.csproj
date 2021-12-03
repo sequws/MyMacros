@@ -31,6 +31,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -45,8 +47,12 @@
     <Compile Include="Abstractions\Loader.cs" />
     <Compile Include="Abstractions\Parser.cs" />
     <Compile Include="Attributes\LocalizedDescriptionAttribute.cs" />
+    <Compile Include="Converters\BoolToVisibilityReverseConverter.cs" />
     <Compile Include="Converters\EnumDescriptionTypeConverter.cs" />
+    <Compile Include="Converters\IntTimeToStringConverter.cs" />
     <Compile Include="Interfaces\IGlobalSettingService.cs" />
+    <Compile Include="Interfaces\ILoader.cs" />
+    <Compile Include="Interfaces\IParser.cs" />
     <Compile Include="Interfaces\ISettings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\GlobalSettingService.cs" />
