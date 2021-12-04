@@ -3,6 +3,7 @@ using NLog;
 using Prism.Commands;
 using Prism.Mvvm;
 using Prism.Regions;
+using Prism.Services.Dialogs;
 
 namespace Shell.ViewModels
 {
@@ -18,13 +19,16 @@ namespace Shell.ViewModels
 
         private readonly IRegionManager _regionManager;
         private readonly IGlobalSettingService _settingService;
+        private readonly IDialogService _dialogService;
 
         public MainWindowViewModel(
             IRegionManager regionManager,
-            IGlobalSettingService settingService)
+            IGlobalSettingService settingService,
+            IDialogService dialogService)
         {
             _regionManager = regionManager;
             _settingService = settingService;
+            _dialogService = dialogService;
 
             NavigateCommand = new DelegateCommand<string>(Navigate);
 
@@ -54,6 +58,18 @@ namespace Shell.ViewModels
         bool CanExecuteCloseCommand()
         {
             return true;
+        }
+
+        private DelegateCommand _showAboutDialogCommand;
+        public DelegateCommand ShowAboutDialogCommand =>
+            _showAboutDialogCommand ?? (_showAboutDialogCommand = new DelegateCommand(ExecuteShowAboutCommand));
+
+        void ExecuteShowAboutCommand()
+        {
+            _dialogService.ShowDialog("AboutDialog", new DialogParameters(), (res) =>
+            {
+
+            });
         }
         #endregion
     }

@@ -8,10 +8,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using System;
-
-namespace Shell.Properties
-{
+namespace Shell.Properties {
+    using System;
+    
+    
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -22,103 +22,94 @@ namespace Shell.Properties
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class Resources
-    {
-
+    public class Resources {
+        
         private static global::System.Resources.ResourceManager resourceMan;
-
+        
         private static global::System.Globalization.CultureInfo resourceCulture;
-
+        
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Resources()
-        {
+        internal Resources() {
         }
-
+        
         /// <summary>
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        public static global::System.Resources.ResourceManager ResourceManager
-        {
-            get
-            {
-                if (object.ReferenceEquals(resourceMan, null))
-                {
+        public static global::System.Resources.ResourceManager ResourceManager {
+            get {
+                if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Shell.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
             }
         }
-
+        
         /// <summary>
         ///   Overrides the current thread's CurrentUICulture property for all
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        public static global::System.Globalization.CultureInfo Culture
-        {
-            get
-            {
+        public static global::System.Globalization.CultureInfo Culture {
+            get {
                 return resourceCulture;
             }
-            set
-            {
+            set {
                 resourceCulture = value;
             }
         }
-
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Author:.
+        /// </summary>
+        public static string AboutDialogAuthor {
+            get {
+                return ResourceManager.GetString("AboutDialogAuthor", resourceCulture);
+            }
+        }
+        
         /// <summary>
         ///   Looks up a localized string similar to File.
         /// </summary>
-        public static string MenuFile
-        {
-            get
-            {
+        public static string MenuFile {
+            get {
                 return ResourceManager.GetString("MenuFile", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Close.
         /// </summary>
-        public static string MenuFileClose
-        {
-            get
-            {
+        public static string MenuFileClose {
+            get {
                 return ResourceManager.GetString("MenuFileClose", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Options.
         /// </summary>
-        public static string MenuFileSettings
-        {
-            get
-            {
+        public static string MenuFileSettings {
+            get {
                 return ResourceManager.GetString("MenuFileSettings", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Help.
         /// </summary>
-        public static string MenuHelp
-        {
-            get
-            {
+        public static string MenuHelp {
+            get {
                 return ResourceManager.GetString("MenuHelp", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to About.
         /// </summary>
-        public static string MenuHelpAbout
-        {
-            get
-            {
+        public static string MenuHelpAbout {
+            get {
                 return ResourceManager.GetString("MenuHelpAbout", resourceCulture);
             }
         }

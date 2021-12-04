@@ -4,6 +4,7 @@ using Core.Services;
 using Prism.Ioc;
 using Prism.Modularity;
 using Shell.DataAccess;
+using Shell.ViewModels;
 using Shell.Views;
 using System.Threading;
 using System.Windows;
@@ -28,6 +29,8 @@ namespace Shell
             // register in MainWindow with region
             containerRegistry.RegisterSingleton<ISettings, MainSettings>();
             containerRegistry.RegisterSingleton<IGlobalSettingService, GlobalSettingService>();
+
+            containerRegistry.RegisterDialog<AboutDialog, AboutDialogViewModel>();
         }
 
         protected override void OnStartup(StartupEventArgs e)
