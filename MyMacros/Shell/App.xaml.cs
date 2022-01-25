@@ -31,6 +31,8 @@ namespace Shell
             containerRegistry.RegisterSingleton<IGlobalSettingService, GlobalSettingService>();
 
             containerRegistry.RegisterDialog<AboutDialog, AboutDialogViewModel>();
+
+            containerRegistry.RegisterForNavigation<MakrosDb>("MakrosDb");
         }
 
         protected override void OnStartup(StartupEventArgs e)

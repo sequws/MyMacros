@@ -13,7 +13,7 @@ namespace Shell.Views
         {
             InitializeComponent();
 
-            regionManager.RegisterViewWithRegion("ContentRegion", typeof(HomeView));
+            regionManager.RegisterViewWithRegion("ContentRegion", typeof(HomeView));            
         }
     }
 }

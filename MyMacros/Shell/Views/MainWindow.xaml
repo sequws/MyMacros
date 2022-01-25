@@ -30,6 +30,8 @@
         <StackPanel DockPanel.Dock="Left" Width="140" Background="#EFEFEF">
             <Button Content="Home" Margin="2" FontSize="12" mahc:ControlsHelper.ContentCharacterCasing="Normal"
                      Command="{Binding NavigateCommand}" CommandParameter="HomeView"></Button>
+            <Button Content="MakrosDB" Margin="2" FontSize="12" mahc:ControlsHelper.ContentCharacterCasing="Normal"
+                     Command="{Binding NavigateCommand}" CommandParameter="MakrosDb"></Button>
         </StackPanel>
         <ContentControl prism:RegionManager.RegionName="ContentRegion"/>
     </DockPanel>
