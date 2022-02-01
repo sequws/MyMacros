@@ -9,11 +9,9 @@ namespace Shell.Views
     /// </summary>
     public partial class MainWindow : MetroWindow
     {
-        public MainWindow(IRegionManager regionManager)
+        public MainWindow()
         {
-            InitializeComponent();
-
-            regionManager.RegisterViewWithRegion("ContentRegion", typeof(HomeView));            
+            InitializeComponent();                     
         }
     }
 }

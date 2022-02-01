@@ -3,6 +3,7 @@ using Core.Interfaces;
 using Core.Services;
 using Prism.Ioc;
 using Prism.Modularity;
+using Prism.Regions;
 using Shell.DataAccess;
 using Shell.ViewModels;
 using Shell.Views;
@@ -33,6 +34,14 @@ namespace Shell
             containerRegistry.RegisterDialog<AboutDialog, AboutDialogViewModel>();
 
             containerRegistry.RegisterForNavigation<MakrosDb>("MakrosDb");
+        }
+
+        protected override void OnInitialized()
+        {
+            base.OnInitialized();
+
+            var regionManager = Container.Resolve<IRegionManager>();
+            regionManager.RegisterViewWithRegion("ContentRegion", typeof(HomeView));
         }
 
         protected override void OnStartup(StartupEventArgs e)
