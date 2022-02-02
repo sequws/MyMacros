@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 
 namespace Core.Abstractions
 {
@@ -51,6 +53,18 @@ namespace Core.Abstractions
             {
                 Directory.CreateDirectory(DataFolder);
             }
+        }
+
+        public List<string> GetFiles()
+        {
+            if (!Directory.Exists(DataFolder))
+            {
+                return new List<string>();
+            }
+
+            string[] files = Directory.GetFiles(DataFolder, extension);
+
+            return files.ToList();
         }
     }
 }

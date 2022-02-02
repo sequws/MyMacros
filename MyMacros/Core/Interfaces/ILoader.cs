@@ -8,7 +8,6 @@ namespace Core.Interfaces
 {
     public interface ILoader<T>
     {
-        List<string> GetFiles();
         IEnumerable<T> LoadData();
     }
 }
