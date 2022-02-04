@@ -5,6 +5,7 @@ using Prism.Ioc;
 using Prism.Modularity;
 using Prism.Regions;
 using Shell.DataAccess;
+using Shell.Interfaces;
 using Shell.ViewModels;
 using Shell.Views;
 using System.Threading;
@@ -32,6 +33,7 @@ namespace Shell
             containerRegistry.RegisterSingleton<IGlobalSettingService, GlobalSettingService>();
 
             containerRegistry.RegisterDialog<AboutDialog, AboutDialogViewModel>();
+            containerRegistry.RegisterSingleton<IRecipeLoader, RecipeLoader>();
 
             containerRegistry.RegisterForNavigation<MakrosDb>("MakrosDb");
         }

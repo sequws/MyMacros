@@ -1,5 +1,6 @@
 ﻿using Core.Abstractions;
 using Core.Interfaces;
+using Shell.Interfaces;
 using Shell.Models;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Shell.DataAccess
 {
-    public class RecipeLoader : Loader, ILoader<Recipe>
+    public class RecipeLoader : Loader, ILoader<Recipe>, IRecipeLoader
     {
         public RecipeLoader() : base("recipes")
         {

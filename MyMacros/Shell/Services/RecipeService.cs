@@ -1,20 +1,23 @@
 ﻿using Shell.Interfaces;
 using Shell.Models;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Shell.Services
 {
     public class RecipeService : IRecipeService
     {
+        IRecipeLoader _recipeLoader;
+
+        public RecipeService(IRecipeLoader recipeLoader)
+        {
+            _recipeLoader = recipeLoader;
+        }
+
         public List<Recipe> GetAllRecipes()
         {
             var recipes = new List<Recipe>();
 
-            // todo - implement
+            var data = _recipeLoader.LoadData();
 
             return recipes;
         }
