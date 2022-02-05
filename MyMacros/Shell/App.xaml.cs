@@ -6,6 +6,7 @@ using Prism.Modularity;
 using Prism.Regions;
 using Shell.DataAccess;
 using Shell.Interfaces;
+using Shell.Models;
 using Shell.ViewModels;
 using Shell.Views;
 using System.Threading;
@@ -34,6 +35,7 @@ namespace Shell
 
             containerRegistry.RegisterDialog<AboutDialog, AboutDialogViewModel>();
             containerRegistry.RegisterSingleton<IRecipeLoader, RecipeLoader>();
+            containerRegistry.RegisterSingleton<IParser<Recipe>, RecipeParser>();
 
             containerRegistry.RegisterForNavigation<MakrosDb>("MakrosDb");
         }
