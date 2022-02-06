@@ -34,7 +34,7 @@ namespace Shell
             containerRegistry.RegisterSingleton<IGlobalSettingService, GlobalSettingService>();
 
             containerRegistry.RegisterDialog<AboutDialog, AboutDialogViewModel>();
-            containerRegistry.RegisterSingleton<IRecipeLoader, RecipeLoader>();
+            containerRegistry.RegisterSingleton<ILoader<Recipe>, RecipeLoader>();
             containerRegistry.RegisterSingleton<IParser<Recipe>, RecipeParser>();
 
             containerRegistry.RegisterForNavigation<MakrosDb>("MakrosDb");

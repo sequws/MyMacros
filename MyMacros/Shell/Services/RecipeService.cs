@@ -7,9 +7,9 @@ namespace Shell.Services
 {
     public class RecipeService : IRecipeService
     {
-        IRecipeLoader _recipeLoader;
+        ILoader<Recipe> _recipeLoader;
         IParser<Recipe> _recipeParser;
-        public RecipeService(IRecipeLoader recipeLoader, IParser<Recipe> recipeParser)
+        public RecipeService(ILoader<Recipe> recipeLoader, IParser<Recipe> recipeParser)
         {
             _recipeLoader = recipeLoader;
             _recipeParser = recipeParser;

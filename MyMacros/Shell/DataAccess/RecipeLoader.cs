@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Shell.DataAccess
 {
-    public class RecipeLoader : Loader, ILoader<Recipe>, IRecipeLoader
+    public class RecipeLoader : Loader, ILoader<Recipe>
     {
         public RecipeLoader() : base("recipes")
         {

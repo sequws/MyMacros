@@ -57,7 +57,6 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="DataAccess\RecipeParser.cs" />
-    <Compile Include="Interfaces\IRecipeLoader.cs" />
     <Compile Include="DataAccess\RecipeLoader.cs" />
     <Compile Include="Interfaces\IRecipeService.cs" />
     <Compile Include="Services\RecipeService.cs" />
